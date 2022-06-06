@@ -1,9 +1,9 @@
 # Mayank-kptncook-data-challenge
 Python code for updating data when user listened to new music and recommending artist to user
 
-
+-----------------------------------------------
 I first took the input from the user about the song that he/she listened. In this code, user 33 has listened to an artist 'abba' so I open the excel file and ask for updation of new artist if a user  listened to the song. If a user listened new song then I update the excel file with 1 in the designated cell of data. 
-
+----------------------------------------
 After doing the updation, I used Collaborative filtering method for recoomending songs to user.
 
 
@@ -19,17 +19,17 @@ The benefits of collaborative filtering are self-evident: We can forecast and of
 *Item Based: which takes similarities between items’ consumption histories
 *User Based: that considers similarities between user consumption histories and item similarities
 
-
+-------------------------------------
 The data collection includes information about users, such as their gender, age, and the artists they have listened to on Last.FM. each row will represent a user, and each column represents and artist.
 
-
+--------------------------------------
 First, I used Item-Based collaborative Filtering on the data to calculate the similarity of each song with the rest of the songs. That is, we want to compare each column in our "data.germany.ibs" data set to every other column in the data set. We will specifically compare what is called as "Cosine Similarity."
 
 In essence, the cosine similarity divides the sum product of the first and second columns by the product of the square root of the sum of squares of each column. In Python, the Scipy library has a function that allows us to do this without customization.
 
 With our similarity matrix completed, we can search for each item's "neighbor" by looping over 'data ibs,' sorting each column in decreasing order, and obtaining the names of the top ten songs.
 
-
+---------------------------------------------
 The following is the procedure for developing a User Based Recommendation System:
 
 1) Have an Item Based Similarity Matrix handy 
